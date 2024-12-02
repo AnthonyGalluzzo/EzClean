@@ -1,0 +1,29 @@
+---
+title: "Introduction to EzClean Package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to EzClean Package}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+ EZClean is an R package designed to simplify the data cleaning process, 
+  making it more accessible and efficient for data analysts and scientists.
+  This is a simple introduction to what my package can do.
+  
+```{r setup}
+library(EzClean)
+data <- data.frame(
+  Name = c("John", "Jane", "Jim", NA),
+  Age = c(25, 50, NA, 28),
+  Score = c(82, 85, 90, 88)
+)
+
+data_clean <- remove_na(data)
+```
